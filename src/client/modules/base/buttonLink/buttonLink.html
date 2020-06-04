@@ -1,0 +1,26 @@
+<!--
+  Extends the basic button to use <a>
+ -->
+
+<template>
+    <a
+        href={uri}
+        target={target}
+        class={computedButtonClass}
+        name={name}
+        accesskey={computedAccessKey}
+        title={computedTitle}
+        type={normalizedType}
+        value={value}
+        onfocus={handleButtonFocus}
+        onblur={handleButtonBlur}
+        aria-describedby={computedAriaDescribedBy}
+        aria-label={computedAriaLabel}
+        aria-controls={computedAriaControls}
+        aria-expanded={computedAriaExpanded}
+        aria-live={computedAriaLive}
+        aria-atomic={computedAriaAtomic}
+    >
+        {label}
+    </a>
+</template>

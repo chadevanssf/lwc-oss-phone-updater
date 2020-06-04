@@ -1,0 +1,24 @@
+{
+    "name": "phone-updater",
+    "repository": "https://github.com/chadevanssf/phone-updater",
+    "keywords": ["LWC", "LWC OSS"],
+    "scripts": {},
+    "formation": {
+        "web": {
+            "quantity": 1
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "environments": {
+        "test": {
+            "scripts": {
+                "test": "yarn test:unit"
+            }
+        }
+    }
+}
