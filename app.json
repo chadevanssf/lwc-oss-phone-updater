@@ -17,7 +17,7 @@
     ],
     "env": {
         "NODE_ENV": {
-            "description": "Node.js variable that determines if this is production or testing, one of 'production', 'test', or 'development'",
+            "description": "Node.js variable that determines if this is production or something else, one of 'production', 'test', or 'development'",
             "value": "development"
         }
     },

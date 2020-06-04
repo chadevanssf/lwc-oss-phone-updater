@@ -15,7 +15,7 @@
         "@salesforce-ux/design-system": "^2.11.9",
         "@salesforce/eslint-config-lwc": "^0.7.0",
         "@salesforce/i18n": "^0.0.12",
-        "eslint": "^7.1.0",
+        "eslint": "^6.8.0",
         "husky": "^4.2.5",
         "lint-staged": "^10.2.6",
         "lwc-services": "^2.0.7",
