@@ -1,0 +1,25 @@
+<template>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="text-input-id-1">
+            <template if:true={required}>
+                <abbr class="slds-required" title="required">* </abbr>
+            </template>
+            {label}
+        </label>
+        <div class="slds-form-element__control">
+            <input type={type} placeholder={placeholder} class="slds-input" />
+            <!--<template if:true={required}>
+                <input type={type} placeholder={placeholder} required class="slds-input" />
+            </template>
+            <template if:true={disabled}>
+                <input type={type} placeholder={placeholder} disabled class="slds-input" />
+            </template>
+            <template if:true={readOnly}>
+                <input type={type} placeholder={placeholder} readonly class="slds-input" />
+            </template>-->
+        </div>
+        <template if:false={validity}>
+            <div class="slds-form-element__help">{message}</div>
+        </template>
+    </div>
+</template>

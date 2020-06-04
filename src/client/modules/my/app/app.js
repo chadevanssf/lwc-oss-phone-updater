@@ -1,9 +1,20 @@
 import { LightningElement } from 'lwc';
 
 export default class App extends LightningElement {
+    firstName;
+    lastName;
+    email;
+    phone;
+
     handleGetData() {
-        const data = { term: 'hello' };
-        fetch('/api/search', {
+        const data = {
+            firstName: this.firstName,
+            lastName: this.lastName,
+            email: this.email,
+            phone: this.phone
+        };
+
+        fetch('/api/update', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

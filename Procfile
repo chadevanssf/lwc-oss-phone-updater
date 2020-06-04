@@ -1,1 +1,1 @@
-web: yarn serve:combined
+web: yarn serve

@@ -3,10 +3,12 @@
 const apiLoader = {};
 const validEndpoints = ['search'];
 
-apiLoader.searchGet = function (req, res) {
-    res.send(`sample json for POST:<br><br>{ term: 'keyword' }`);
+apiLoader.updateGet = function (req, res) {
+    res.send(
+        `sample json for POST:<br><br>{ firstName: 'fn', lastName: 'ln', email: 'e@mail.com', phone: '123-456-7890' }`
+    );
 };
-apiLoader.searchPost = function (req, res) {
+apiLoader.updatePost = function (req, res) {
     res.json({ found: true });
 };
 
@@ -14,11 +16,11 @@ apiLoader.register = function (expressApp, rootUrl) {
     expressApp.get(rootUrl, (req, res) => {
         res.json({ success: true, endpoints: validEndpoints });
     });
-    expressApp.get(rootUrl + '/search', (req, res) => {
-        this.searchGet(req, res);
+    expressApp.get(rootUrl + '/update', (req, res) => {
+        this.updateGet(req, res);
     });
-    expressApp.post(rootUrl + '/search', (req, res) => {
-        this.searchPost(req, res);
+    expressApp.post(rootUrl + '/update', (req, res) => {
+        this.updatePost(req, res);
     });
 };
 
