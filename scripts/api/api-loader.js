@@ -1,9 +1,12 @@
-const IS_DEBUG = process.env.NODE_ENV != 'production';
+//const IS_DEBUG = process.env.NODE_ENV !== 'production';
 
 const apiLoader = {};
 const validEndpoints = ['search'];
 
-apiLoader.search = function (req, res) {
+apiLoader.searchGet = function (req, res) {
+    res.send(`sample json for POST:<br><br>{ term: 'keyword' }`);
+};
+apiLoader.searchPost = function (req, res) {
     res.json({ found: true });
 };
 
@@ -12,7 +15,10 @@ apiLoader.register = function (expressApp, rootUrl) {
         res.json({ success: true, endpoints: validEndpoints });
     });
     expressApp.get(rootUrl + '/search', (req, res) => {
-        this.search(req, res);
+        this.searchGet(req, res);
+    });
+    expressApp.post(rootUrl + '/search', (req, res) => {
+        this.searchPost(req, res);
     });
 };
 

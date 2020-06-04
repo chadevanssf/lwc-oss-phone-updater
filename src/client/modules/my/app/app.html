@@ -1,6 +1,8 @@
 <template>
     <!-- LWC sample component <my-greeting> -->
-    <div class="slds-align_absolute-center slds-text-heading_large">
+    <div
+        class="slds-align_absolute-center slds-text-heading_large slds-m-around_large"
+    >
         <!-- <my-greeting speed="slow"></my-greeting> -->
         <my-greeting speed="medium"></my-greeting>
         <!-- <my-greeting speed="fast"></my-greeting> -->
@@ -24,6 +26,12 @@
             label="Learn LWC"
             variant="brand"
             uri="https://lwc.dev"
-        ></base-button-link>
+        >
+        </base-button-link>
+        <base-button
+            label="Get Data"
+            variant="success"
+            onclick={handleGetData}
+        ></base-button>
     </div>
 </template>

@@ -1,5 +1,10 @@
 .slds-button_brand,
-.slds-button--brand{
+.slds-button--brand,
+.slds-button_brand:focus,
+.slds-button--brand:focus,
+.slds-button_brand:hover,
+.slds-button--brand:hover
+{
   background-color: #ff6000;
   border-color: #ff6000;
 }
