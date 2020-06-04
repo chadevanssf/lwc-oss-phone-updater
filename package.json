@@ -58,7 +58,8 @@
     },
     "repository": "https://github.com/chadevanssf/lwc-oss-phone-updater",
     "scripts": {
-        "build": "lwc-services build -m production",
+        "build": "if [[${NODE_ENV} == \"production\"]]; then yarn build:production; else yarn build:development; fi",
+        "build:production": "lwc-services build -m production",
         "build:development": "lwc-services build",
         "lint": "eslint ./src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
