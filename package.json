@@ -1,9 +1,9 @@
 {
-    "name": "phone-updater",
-    "description": "Phone Updater for Heroku Connect",
+    "name": "lwc-oss-phone-updater",
+    "description": "Phone Updater for Heroku Connect with LWC OSS",
     "version": "0.0.1",
     "author": "Chad Evans",
-    "bugs": "https://github.com/chadevanssf/phone-updater/issues",
+    "bugs": "https://github.com/chadevanssf/lwc-oss-phone-updater/issues",
     "dependencies": {
         "compression": "^1.7.4",
         "express": "^4.17.1",
@@ -27,7 +27,7 @@
         "npm": ">=6.4.1",
         "yarn": ">=1.9.4"
     },
-    "homepage": "https://github.com/chadevanssf/phone-updater",
+    "homepage": "https://github.com/chadevanssf/lwc-oss-phone-updater",
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
@@ -56,7 +56,7 @@
         ],
         "exec": "node ./src/server/api.js"
     },
-    "repository": "https://github.com/chadevanssf/phone-updater",
+    "repository": "https://github.com/chadevanssf/lwc-oss-phone-updater",
     "scripts": {
         "build": "lwc-services build -m production",
         "build:development": "lwc-services build",
