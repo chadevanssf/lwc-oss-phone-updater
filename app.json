@@ -1,6 +1,7 @@
 {
-    "name": "phone-updater",
-    "repository": "https://github.com/chadevanssf/phone-updater",
+    "name": "lwc-oss-phone-updater",
+    "description": "Phone Updater for Heroku Connect with LWC OSS",
+    "repository": "https://github.com/chadevanssf/lwc-oss-phone-updater",
     "keywords": ["LWC", "LWC OSS"],
     "scripts": {},
     "formation": {
@@ -14,8 +15,17 @@
             "url": "heroku/nodejs"
         }
     ],
+    "env": {
+        "NODE_ENV": {
+            "description": "Node.js variable that determines if this is production or testing, one of 'production', 'test', or 'development'",
+            "value": "development"
+        }
+    },
     "environments": {
         "test": {
+            "env": {
+                "NODE_ENV": "test"
+            },
             "scripts": {
                 "test": "yarn test:unit"
             }

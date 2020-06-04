@@ -1,6 +1,6 @@
 # lwc-ossphone-updater
 
-Phone Updater for Heroku Connect with LWC OSS.
+Phone Updater for Heroku Connect with LWC OSS. Inspired by the original, [https://github.com/jamesward/heroku-connect-phone-change](https://github.com/jamesward/heroku-connect-phone-change)
 
 ## Dev Notes
 
