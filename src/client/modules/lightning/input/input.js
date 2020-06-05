@@ -16,8 +16,8 @@ export default class Input extends LightningElement {
     @api get disabled() {
         return this._required;
     }
-    set disabled(value) {
-        this._disabled = value;
+    set disabled(v) {
+        this._disabled = v;
         this.manageRequired();
     }
     manageDisabled() {
@@ -60,8 +60,8 @@ export default class Input extends LightningElement {
     @api get readOnly() {
         return this._required;
     }
-    set readOnly(value) {
-        this._readOnly = value;
+    set readOnly(v) {
+        this._readOnly = v;
         this.manageRequired();
     }
     manageReadOnly() {
@@ -75,8 +75,8 @@ export default class Input extends LightningElement {
     @api get required() {
         return this._required;
     }
-    set required(value) {
-        this._required = value;
+    set required(v) {
+        this._required = v;
         this.manageRequired();
     }
     manageRequired() {
@@ -97,16 +97,16 @@ export default class Input extends LightningElement {
         return this._validity;
     }
     _validity = true;
-    @api value;
+    _value = '';
+    @api get value() {
+        return this._value ? this._value : '';
+    }
+    set value(v) {
+        this._value = v;
+    }
     @api variant;
 
     _booleanAttrSet = false;
-
-    constructor() {
-        super();
-        console.log('input control created');
-        //console.log(this.template.querySelector('.slds-input'));
-    }
 
     renderedCallback() {
         if (this._booleanAttrSet) {
@@ -131,9 +131,6 @@ export default class Input extends LightningElement {
     @api showHelpMessageIfInvalid() {}
 
     manageBooleanAttribute(control, attrName, setting) {
-        console.log('control attribute: ' + attrName);
-        console.log('control setting: ' + setting);
-        console.log(control);
         if (control) {
             if (setting) {
                 control.setAttribute(attrName, attrName);
@@ -141,5 +138,15 @@ export default class Input extends LightningElement {
                 control.removeAttribute(attrName);
             }
         }
+    }
+
+    get inputElement() {
+        return this.template.querySelector('input');
+    }
+
+    handleOnChange(event) {
+        let val = event.target.value;
+        this._value = val;
+        this.dispatchEvent(new CustomEvent('change'), { detail: { val } });
     }
 }

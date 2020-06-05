@@ -10,21 +10,21 @@ The source files are located in the [`src`](./src) folder. All web components ar
 
 1. Install the project dependencies using `yarn`
 
-```sh
-yarn install
-```
+    ```sh
+    yarn install
+    ```
 
 1. Start the app in watch mode, without any of the apis available.
 
-```sh
-yarn watch
-```
+    ```sh
+    yarn watch
+    ```
 
 1. Alternatively, start the project with the apis available:
 
-```sh
-yarn server
-```
+    ```sh
+    yarn server
+    ```
 
 ## Deploy to Heroku
 
